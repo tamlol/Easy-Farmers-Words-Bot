@@ -4,8 +4,8 @@
 const style = 'color:green; font-size:30px; font-weight: bold; -webkit-text-stroke: 1px black;'
 console.log("%c Farmers Words บอทที่เขียนเล่นๆ", style);
 
-var Account = ""
-var RpcEndpoint = "https://wax.pink.gg"
+let Account = "srvxi.wam"
+let RpcEndpoint = "https://wax.pink.gg"
 
 console.log("FB: https://facebook.com/h4xtx");
 console.log("Account: "+Account)
@@ -36,13 +36,15 @@ function delay(delayInms) {
 async function checktimeforclaim(){
 for (i=0;i<window.next_availabilityData.length;i++){
   if(Math.round(new Date().getTime()/1000) >= window.next_availabilityData[i]['next_availability']){
-    document.getElementsByClassName('carousel__img--item')[i].click()
-    let delayres = await delay(2000);
+    if(typeof(document.getElementsByClassName('carousel__img--item')[i]) !== undefined){
+      document.getElementsByClassName('carousel__img--item')[i].click()
+    }
     if(document.getElementsByClassName('button-section set-height')[0].innerText == 'Mine'){
         document.getElementsByClassName('button-section set-height')[0].click();
         console.log(Math.round(new Date().getTime()/1000), times)
         getavailability()
       }
+    let delayres = await delay(2000);
 }
 }
 
