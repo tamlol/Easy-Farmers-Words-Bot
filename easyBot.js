@@ -40,13 +40,11 @@ for (i=0;i<window.next_availabilityData.length;i++){
     }
     if(document.getElementsByClassName('button-section set-height')[0].innerText == 'Mine'){
         document.getElementsByClassName('button-section set-height')[0].click();
-        console.log(Math.round(new Date().getTime()/1000), times)
         getavailability()
       }
     let delayres = await delay(2000);
 }
 }
-
 }
 
 getavailability()
