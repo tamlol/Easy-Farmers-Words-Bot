@@ -1,4 +1,4 @@
-//วิธีใช้งาน ใส่ account wallet ของตัวเอง  ไปที่ https://play.farmersworld.io/ กด F12 ไปที่ Console แล้ววางโค้ดเลย
+//วิธีใช้งาน ใส่ Wallet Address ของตัวเอง  ไปที่ https://play.farmersworld.io/ กด F12 ไปที่ Console แล้ววางโค้ดเลย
 
 const style = 'color:green; font-size:30px; font-weight: bold; -webkit-text-stroke: 1px black;'
 console.log("%c Farmers Words บอทที่เขียนเล่นๆ", style);
