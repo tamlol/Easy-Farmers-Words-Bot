@@ -4,7 +4,7 @@
 const style = 'color:green; font-size:30px; font-weight: bold; -webkit-text-stroke: 1px black;'
 console.log("%c Farmers Words บอทที่เขียนเล่นๆ", style);
 
-let Account = "srvxi.wam"
+let Account = ""
 let RpcEndpoint = "https://wax.pink.gg"
 
 console.log("FB: https://facebook.com/h4xtx");
