@@ -4,7 +4,7 @@
 const style = "color:green; font-size:30px; font-weight: bold; -webkit-text-stroke: 1px black;";
 console.log("%c Farmers Words บอทที่เขียนเล่นๆ", style);
 
-let Account = "";
+let Account = "srvxi.wam";
 let RpcEndpoint = "https://wax.pink.gg";
 
 console.log("FB: https://facebook.com/h4xtx");
@@ -42,10 +42,15 @@ for (i=0;i<window.next_availabilityData.length;i++){
     let delayres = await delay(5000);
     if(document.getElementsByClassName("button-section set-height")[0].innerText == "Mine"){
         document.getElementsByClassName("button-section set-height")[0].click();
+        delayres
+        if(typeof(document.getElementsByClassName("modal-content mid")[0]) !== undefined){
+            console.log(document.getElementsByClassName("modal-content mid")[0].innerText)
+        }
         getavailability()
       }
     
 }
+
 }
 
 };
