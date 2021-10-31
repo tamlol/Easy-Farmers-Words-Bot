@@ -34,18 +34,17 @@ function delay(delayInms) {
 };
 
 async function checktimeforclaim(){
+  
 for (i=0;i<window.next_availabilityData.length;i++){
   if(Math.round(new Date().getTime()/1000) >= window.next_availabilityData[i]["next_availability"]){
-    if(typeof(document.getElementsByClassName("carousel__img--item")[i]) !== undefined){
-      document.getElementsByClassName("carousel__img--item")[i].click()
-    }
-    let delayres = await delay(5000);
+   if(typeof(document.getElementsByClassName("carousel__img--item")[i]) !== undefined){
+     document.getElementsByClassName("carousel__img--item")[i].click()
+   }
+    
     if(document.getElementsByClassName("button-section set-height")[0].innerText == "Mine"){
+        let delayres = await delay(10000);
         document.getElementsByClassName("button-section set-height")[0].click();
-        delayres
-        if(typeof(document.getElementsByClassName("modal-content mid")[0]) !== undefined){
-            console.log(document.getElementsByClassName("modal-content mid")[0].innerText)
-        }
+        let delayres1 = await delay(10000);
         getavailability()
       }
     
@@ -56,4 +55,4 @@ for (i=0;i<window.next_availabilityData.length;i++){
 };
 
 getavailability();
-setInterval(checktimeforclaim, 5000);
+setInterval(checktimeforclaim, 20000);
